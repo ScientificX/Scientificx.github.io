@@ -1,0 +1,47 @@
+#+TITLE: The Hello World data structure- Binary Trees
+#+DATE: <2020-12-31 >
+#+LAYOUT: post
+#+CATEGORIES: algoxy
+#+TAGS: algorithms
+Binary Trees are one of the simplest data structures to implement, indeed this is usually the second example used to teach recursion after the fibonaci is used 
+#+HTML: <!-- more -->
+in haskell the basic structure for defining them is 
+
+#+begin_src haskell
+  data Bint = Empty
+            | Node (Bint a) a (Bint b)
+#+end_src
+
+Im begining a series of posts that will help document my progress through the book [[https://github.com/liuxinyu95/AlgoXY][Elementary Algorithms]]. I decided to read this book as it brings a fresh perpective in
+the domain of algorithm books - it presents algorithms both in a functional and imperative manner contrasting and with full code snippets.
+** Insertion into a Binary Search Tree
+   To insert k
+   + case both branches are empty we insert the value here
+   + k > than key then insert in right branch ; else
+   + k < key insert in left branch
+   
+  In haskell  
+   
+  #+begin_src haskell
+    insert Empty k = Node Empty k Empty
+    insert (Node Left v Right) k = case k of 
+                                     k < x -> Node (insert(Left k) x Right) 
+                                     k > x -> Node(Left x insert(Right k))
+
+  #+end_src
+  
+** Tree Traversal 
+   
+   + Pre-order : key, Left, Right
+   + In-order : Left, key, Right
+   + Post-order : Left, Right, key
+   
+   We can apply a map-like function to our tree during traversal like this
+   
+   Inorder 
+   #+begin_src haskell 
+     traverse :: Bint -> Bint
+     traverse (Node Empty x Empty) f = Empty
+     traverse (Node Left x Right) f = Node (traverse(Left f) f k traverse(Right f)) 
+   #+end_src
+   

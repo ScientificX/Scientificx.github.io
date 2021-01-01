@@ -1,0 +1,26 @@
+#+TITLE: main => "Hello_World!"
+#+DATE: <2020-12-30 Sun 08:52>
+#+LAYOUT: post
+#+CATEGORIES: init
+#+TAGS: init
+Welcome to my blog. Finding this blog wasnt easy i congratulate you on that
+#+HTML: <!-- more -->
+
+Today after reading some articles on time management and learning strategies, ive decided that blogging will help me commit more to my projects and self development by providing acountabilty and a means to summarize my thoughts.
+
+Blogging will cover my
+
++ Functional programming journey
++ Electrical Engineering studies journey
++ Discrete Math / Category Theory Beginnings
++ My wild ;)) thoughts (read at your own risk!)
+
+Let the fun begin:
+
+#+BEGIN_SRC haskell
+ module StrangeLife
+ main :: IO ()
+  do {
+	putStr "BEGIN CRUISE CONTROL";
+  }
+#+END_SRC

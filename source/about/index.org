@@ -1,0 +1,5 @@
+#+TITLE: main => "Hello_World!"
+#+DATE: <2020-12-30 Wed 08:52>
+
+Im Favour an Electrical Engineering student at Covenant University, Nigeria. \\ 
+This is a collection of my rants, projects and latest obsessions ).
